@@ -1,0 +1,9 @@
+[user]
+	name = Casey Patrick Driscoll
+	email = caseypatrickdriscoll@me.com
+[color]
+    ui = true
+[core]
+	editor = vim
+[alias]
+	co = checkout
