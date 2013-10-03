@@ -16,6 +16,7 @@ a d='date'
 a detach='tmux detach'
 a doit='eval "sudo $(fc -ln -1)"' # when I forget to use sudo, redo the last command with sudo
 a g='git'
+a github='git push github master'
 a go='pushd $dir > /dev/null' # pushes dir to stack silently
 a install='sudo apt-get install'
 a j='jobs'
@@ -36,6 +37,7 @@ a t='tf -L 1' # show tree structure at expanding levels
 a tt='tf -L 2'
 a ttt='tf -L 3'
 a tttt='tf -L 4'
+a v='vagrant'
 a x='exit'
 a vimrc='vim ~/.vimrc'
 
