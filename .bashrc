@@ -66,7 +66,7 @@ elif [[ `uname` == 'Darwin' ]]; then
 	alias  cdsite='cd ~/Sites'
 	
 	alias  la='ls -alh -G'
-	alias  lh='ls -ld .*'
+	alias  lh='ls -ldh .*'
 	alias  ll='ls -lh -G'
 	alias  apache='sudo /usr/sbin/apachectl'
   alias  nginx='sudo nginx'
