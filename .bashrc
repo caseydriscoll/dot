@@ -1,75 +1,75 @@
 alias a='alias'
 
-a ..='cd ..'
-a ...='cd ../..'
-a ....='cd ../../..'
+alias  ..='cd ..'
+alias  ...='cd ../..'
+alias  ....='cd ../../..'
 
-a att='tmux attach'
-a attach='tmux attach'
-a b='back'
-a back='popd'
-a brc='vim ~/.bashrc'
-a c='clear'
-a cdh='cd ~'
-a cdhome='cd ~'
-a d='date'
-a detach='tmux detach'
-a doit='eval "sudo $(fc -ln -1)"' # when I forget to use sudo, redo the last command with sudo
-a g='git'
-a github='git push github master'
-a go='pushd $dir > /dev/null' # pushes dir to stack silently
-a install='sudo apt-get install'
-a j='jobs'
-a log='git lg'
-a path='echo $PATH'
-a please='sudo' # sometimes I feel courteous
-a pull='git pull hub master'
-a push='git push hub master'
-a py='python'
-a r='rails'
-a rm='rm -i' # it never hurts to double check
-a s='du -sh' # shows the total size of the current (or given) dir
-a sf='du -hd 1' # shows the total size of all the folders in the current (or given) dir
-a sb='source ~/.bashrc'
-a status='git status'
-a tf='tree -C'
-a t='tf -L 1' # show tree structure at expanding levels
-a tt='tf -L 2'
-a ttt='tf -L 3'
-a tttt='tf -L 4'
-a v='vagrant'
-a x='exit'
-a vimrc='vim ~/.vimrc'
+alias  att='tmux attach'
+alias  attach='tmux attach'
+alias  b='back'
+alias  back='popd'
+alias  brc='vim ~/.bashrc'
+alias  c='clear'
+alias  cdh='cd ~'
+alias  cdhome='cd ~'
+alias  d='date'
+alias  detach='tmux detach'
+alias  doit='eval "sudo $(fc -ln -1)"' # when I forget to use sudo, redo the last command with sudo
+alias  g='git'
+alias  github='git push github master'
+alias  go='pushd $dir > /dev/null' # pushes dir to stack silently
+alias  install='sudo apt-get install'
+alias  j='jobs'
+alias  log='git lg'
+alias  path='echo $PATH'
+alias  please='sudo' # sometimes I feel courteous
+alias  pull='git pull hub master'
+alias  push='git push hub master'
+alias  py='python'
+alias  r='rails'
+alias  rm='rm -i' # it never hurts to double check
+alias  s='du -sh' # shows the total size of the current (or given) dir
+alias  sf='du -hd 1' # shows the total size of all the folders in the current (or given) dir
+alias  sb='source ~/.bashrc'
+alias  status='git status'
+alias  tf='tree -C'
+alias  t='tf -L 1' # show tree structure at expanding levels
+alias  tt='tf -L 2'
+alias  ttt='tf -L 3'
+alias  tttt='tf -L 4'
+alias  v='vagrant'
+alias  x='exit'
+alias  vimrc='vim ~/.vimrc'
 
 function trash { mv "$1" ~/.Trash; } # I never use this.
 export -f trash
-a T='trash'
+alias  T='trash'
 
 PS1="\h:\W$ "
 
 if [[ `uname` == 'Linux' ]]; then
-	a sd='du --max-depth=1 -h | sort -rh'
+	alias  sd='du --max-depth=1 -h | sort -rh'
 	export LS_OPTIONS='--color=auto'
-	a ll='ls $LS_OPTIONS -lh'
-	a la='ls $LS_OPTIONS -Alh'
-	a lh='ls $LS_OPTIONS -ldh .*'
-	a apache='sudo /etc/init.d/apache2'
-  a nginx='sudo service nginx'
-  a update='sudo apt-get update'
-  a upgrade='sudo apt-get upgrade --show-upgraded'
-  a www='cd /srv/www/'
+	alias  ll='ls $LS_OPTIONS -lh'
+	alias  la='ls $LS_OPTIONS -Alh'
+	alias  lh='ls $LS_OPTIONS -ldh .*'
+	alias  apache='sudo /etc/init.d/apache2'
+  alias  nginx='sudo service nginx'
+  alias  update='sudo apt-get update'
+  alias  upgrade='sudo apt-get upgrade --show-upgraded'
+  alias  www='cd /srv/www/'
 elif [[ `uname` == 'Darwin' ]]; then
   echo "THIS IS OSX"
-	a cddesk='cd ~/Desktop'
-	a cddown='cd ~/Downloads'
-	a cddrop='cd ~/Dropbox'
-	a cdsite='cd ~/Sites'
+	alias  cddesk='cd ~/Desktop'
+	alias  cddown='cd ~/Downloads'
+	alias  cddrop='cd ~/Dropbox'
+	alias  cdsite='cd ~/Sites'
 	
-	a la='ls -alh -G'
-	a lh='ls -ld .*'
-	a ll='ls -lh -G'
-	a apache='sudo /usr/sbin/apachectl'
-  a nginx='sudo nginx'
+	alias  la='ls -alh -G'
+	alias  lh='ls -ld .*'
+	alias  ll='ls -lh -G'
+	alias  apache='sudo /usr/sbin/apachectl'
+  alias  nginx='sudo nginx'
 
 	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
   PATH=/usr/local/heroku/bin:$PATH
