@@ -1,12 +1,13 @@
 [user]
-	name = Casey Patrick Driscoll
-	email = caseypatrickdriscoll@me.com
+  name = Casey Patrick Driscoll
+  email = caseypatrickdriscoll@me.com
 [color]
-    ui = true
+  ui = true
 [core]
-	editor = vim
+  editor = vim
 [alias]
   b = branch
   m = merge
-	co = checkout
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  co = checkout
+  ci = commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
