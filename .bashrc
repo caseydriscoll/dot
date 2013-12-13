@@ -58,6 +58,9 @@ if [[ `uname` == 'Linux' ]]; then
   alias  update='sudo apt-get update'
   alias  upgrade='sudo apt-get upgrade --show-upgraded'
   alias  www='cd /srv/www/'
+
+  source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
+  PATH="$PATH:$HOME/.wp-cli/bin"
 elif [[ `uname` == 'Darwin' ]]; then
   echo "THIS IS OSX"
 	alias  cddesk='cd ~/Desktop'
@@ -77,5 +80,7 @@ elif [[ `uname` == 'Darwin' ]]; then
 	export PATH
 
   source ~/.rvm/scripts/rvm
+
+  export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 fi
 
