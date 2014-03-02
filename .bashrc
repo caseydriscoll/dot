@@ -41,7 +41,7 @@ alias  v='vagrant'
 alias  x='exit'
 alias  vimrc='vim ~/.vimrc'
 
-function addhost { sudo echo "$(cat /etc/hosts) $1" | sudo tee /etc/hosts; }
+function addhost { echo "$(cat /etc/hosts) $1" | sudo tee /etc/hosts; }
 export -f addhost
 
 function trash { mv "$1" ~/.Trash; } # I never use this.
