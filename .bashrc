@@ -76,6 +76,7 @@ elif [[ `uname` == 'Darwin' ]]; then
 	alias  ll='ls -lh -G'
 	alias  apache='sudo /usr/sbin/apachectl'
   alias  nginx='sudo nginx'
+  alias  www="cd ~/Development/www"
 
 	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
   PATH=/usr/local/heroku/bin:$PATH
