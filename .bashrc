@@ -31,6 +31,7 @@ alias  rm='rm -i' # it never hurts to double check
 alias  s='du -sh' # shows the total size of the current (or given) dir
 alias  sf='du -hd 1' # shows the total size of all the folders in the current (or given) dir
 alias  sb='source ~/.bashrc'
+alias  st='status'
 alias  status='git status'
 alias  tf='tree -C'
 alias  t='tf -L 1' # show tree structure at expanding levels
