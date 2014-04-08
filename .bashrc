@@ -18,6 +18,7 @@ alias  doit='eval "sudo $(fc -ln -1)"' # when I forget to use sudo, redo the las
 alias  g='git'
 alias  github='git push github master'
 alias  go='pushd $dir > /dev/null' # pushes dir to stack silently
+alias  h='sudo vim /etc/hosts'
 alias  install='sudo apt-get install'
 alias  j='jobs'
 alias  log='git lg'
