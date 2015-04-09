@@ -1,4 +1,4 @@
-source .alias
+source ~/.alias
 
 function addhost { echo "$(cat /etc/hosts) $1" | sudo tee /etc/hosts; }
 export -f addhost
