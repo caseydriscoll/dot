@@ -21,8 +21,10 @@ if [[ `uname` == 'Linux' ]]; then
 	alias  upgrade='sudo apt-get upgrade --show-upgraded'
 	alias  www='cd /srv/www/'
 
-	source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
-	PATH="$PATH:$HOME/.wp-cli/bin"
+	if [ -d "~/.wp-cli" ]; then
+		source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
+		PATH="$PATH:$HOME/.wp-cli/bin"
+	fi
 elif [[ `uname` == 'Darwin' ]]; then
 	echo "THIS IS OSX"
 	alias  cddesk='cd ~/Desktop'
