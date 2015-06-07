@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm -f ~/.bashrc ~/.alias ~/.gitconfig ~/.vimrc
+
+ln -s ~/dot_files/.bashrc    ~/.bashrc
+ln -s ~/dot_files/.alias     ~/.alias
+ln -s ~/dot_files/.gitconfig ~/.gitconfig
+ln -s ~/dot_files/.vimrc     ~/.vimrc
+
+source ~/.bashrc
