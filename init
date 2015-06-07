@@ -2,9 +2,9 @@
 
 rm -f ~/.bashrc ~/.alias ~/.gitconfig ~/.vimrc
 
-ln -s ~/dot_files/.bashrc    ~/.bashrc
-ln -s ~/dot_files/.alias     ~/.alias
-ln -s ~/dot_files/.gitconfig ~/.gitconfig
-ln -s ~/dot_files/.vimrc     ~/.vimrc
+ln -s ~/dot/.bashrc    ~/.bashrc
+ln -s ~/dot/.alias     ~/.alias
+ln -s ~/dot/.gitconfig ~/.gitconfig
+ln -s ~/dot/.vimrc     ~/.vimrc
 
 source ~/.bashrc
