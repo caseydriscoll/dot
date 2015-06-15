@@ -7,7 +7,7 @@ function trash { mv "$1" ~/.Trash; } # I never use this.
 export -f trash
 alias  T='trash'
 
-PS1="\h:\W$ "
+PS1="> "
 
 if [[ `uname` == 'Linux' ]]; then
 	alias  sd='du --max-depth=1 -h | sort -rh'
