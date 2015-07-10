@@ -47,6 +47,6 @@ elif [[ `uname` == 'Darwin' ]]; then
 
 	# source ~/.rvm/scripts/rvm
 
-	export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+	# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 fi
 

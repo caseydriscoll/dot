@@ -22,6 +22,7 @@ alias  h='sudo vim /etc/hosts'
 alias  install='sudo apt-get install'
 alias  j='jobs'
 alias  log='git lg'
+alias  p='pwd'
 alias  path='echo $PATH'
 alias  please='sudo' # sometimes I feel courteous
 alias  pull='git pull origin master'
