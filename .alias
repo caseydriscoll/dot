@@ -35,6 +35,7 @@ alias  sf='du -hd 1' # shows the total size of all the folders in the current (o
 alias  sb='source ~/.bashrc'
 alias  st='status'
 alias  status='git status'
+alias  su='sublime .'
 alias  tf='tree -C'
 alias  t='tf -L 1' # show tree structure at expanding levels
 alias  tt='tf -L 2'
