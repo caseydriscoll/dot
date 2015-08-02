@@ -39,6 +39,7 @@ elif [[ `uname` == 'Darwin' ]]; then
 	# alias  nginx='sudo nginx'
 	alias  www="cd ~/Development/www"
 	alias  vvv="cd ~/Development/vvv"
+  alias  sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 	# PATH=/usr/local/heroku/bin:$PATH
