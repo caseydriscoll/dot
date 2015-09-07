@@ -4,6 +4,7 @@ alias  ..='cd ..'
 alias  ...='cd ../..'
 alias  ....='cd ../../..'
 
+alias  as='osascript'
 alias  att='tmux attach'
 alias  attach='tmux attach'
 alias  b='back'
