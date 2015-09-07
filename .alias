@@ -20,6 +20,7 @@ alias g='git'
 alias github='git push github master'
 alias go='pushd $dir > /dev/null' # pushes dir to stack silently
 alias h='sudo vim /etc/hosts'
+alias harden='find . -type d -exec chmod 755 {} \; find . -type f -exec chmod 644 {} \;'
 alias install='sudo apt-get install'
 alias j='jobs'
 alias log='git lg'
