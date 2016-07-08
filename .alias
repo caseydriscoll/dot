@@ -24,6 +24,7 @@ alias harden='find . -type d -exec chmod 755 {} \; find . -type f -exec chmod 64
 alias install='sudo apt-get install'
 alias j='jobs'
 alias log='git lg'
+alias lognginx='sudo tail /var/log/nginx/error.log'
 alias now='date +%s'
 alias p='pwd'
 alias path='echo $PATH'
