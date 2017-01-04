@@ -22,7 +22,6 @@ if [[ `uname` == 'Linux' ]]; then
 	alias  www='cd /srv/www/'
 
 	if [ -d "~/.wp-cli" ]; then
-		source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
 		PATH="$PATH:$HOME/.wp-cli/bin"
 	fi
 elif [[ `uname` == 'Darwin' ]]; then
@@ -41,13 +40,13 @@ elif [[ `uname` == 'Darwin' ]]; then
 	alias  vvv="cd ~/Development/vvv"
   alias  sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
-	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
-	# PATH=/usr/local/heroku/bin:$PATH
-	# PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.composer/vendor/bin
 	export PATH
 
-	# source ~/.rvm/scripts/rvm
+	source ~/.rvm/scripts/rvm
 
 	# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 fi
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
