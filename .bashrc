@@ -7,6 +7,9 @@ function trash { mv "$1" ~/.Trash; } # I never use this.
 export -f trash
 alias  T='trash'
 
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
 PS1="> "
 
 if [[ `uname` == 'Linux' ]]; then
