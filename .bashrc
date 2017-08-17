@@ -43,7 +43,9 @@ elif [[ `uname` == 'Darwin' ]]; then
 	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.composer/vendor/bin
 	export PATH
 
-	source ~/.rvm/scripts/rvm
+  if [ -d "~/.rvm" ]; then
+    source ~/.rvm/scripts/rvm
+  fi
 
 	# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 fi
