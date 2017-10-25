@@ -6,3 +6,4 @@ ln -s ~/dot/.bashrc    ~/.bashrc
 ln -s ~/dot/.alias     ~/.alias
 ln -s ~/dot/.gitconfig ~/.gitconfig
 ln -s ~/dot/.vimrc     ~/.vimrc
+ln -s ~/dot/.tigrc     ~/.tigrc
