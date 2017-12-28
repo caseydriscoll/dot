@@ -55,6 +55,7 @@ filetype plugin indent on    " required
 set history=1000
 
 " Enable filetype plugins
+filetype on
 filetype plugin on
 filetype indent on
 
