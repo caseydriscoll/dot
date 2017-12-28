@@ -157,6 +157,24 @@ nmap <C-k> zc
 imap <C-k> zc
 
 :filetype plugin on
+
+" CtrlP plugin
+let g:ctrlp_map = '<Leader>e'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_custom_ignore = '\vvendor$|node_modules$|tmp$|\.git$|\.hg$|\.svn$'
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtSelectMove("j")':   ['<c-j>', '<c-n>'],
+  \ 'PrtSelectMove("k")':   ['<c-k>', '<c-p>'],
+  \ 'PrtHistory(-1)':       ['<down>'],
+  \ 'PrtHistory(1)':        ['<up>'],
+  \ 'MarkToOpen()':         ['<c-a>'],
+  \ }
+map <Leader>f :CtrlPCurFile<CR>
+map <Leader>r :CtrlPMRUFiles<CR>
+map <Leader>b :CtrlPBuffer<CR>
+map <Leader>g :CtrlPLine<CR>
+map <Leader>t :CtrlPBufTag<CR>
+map <Leader>T :CtrlPBufTagAll<CR>
 " augroup ProjectDrawer
 "  autocmd!
 "  autocmd VimEnter * :Vexplore
