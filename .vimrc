@@ -69,6 +69,7 @@ let g:mapleader = " "
 
 " Fast saving
 nmap <leader>w :w!<cr>
+nmap <leader>x :q<cr>
 nmap <leader>qq :q!<cr>
 
 " RSpec.vim mappings
