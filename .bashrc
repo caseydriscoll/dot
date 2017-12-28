@@ -43,8 +43,13 @@ elif [[ `uname` == 'Darwin' ]]; then
 	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.composer/vendor/bin
 	export PATH
 
+  if [ -d "$HOME/.rbenv" ]; then
+    export PATH="$HOME/.rbenv/shims:$PATH"
+  fi
+
   if [ -d "~/.rvm" ]; then
     source ~/.rvm/scripts/rvm
+    export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
   fi
 
 	# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
