@@ -149,8 +149,10 @@ hi Search ctermfg=NONE ctermbg=lightgray  cterm=bold,underline
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
-set t_vb=
-set tm=500
+" set belloff=all
+" set t_vb=
+" set tm=500
+
 
 syntax on
 
