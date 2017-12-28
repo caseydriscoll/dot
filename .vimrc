@@ -157,6 +157,11 @@ nmap <C-k> zc
 imap <C-k> zc
 
 :filetype plugin on
+" augroup ProjectDrawer
+"  autocmd!
+"  autocmd VimEnter * :Vexplore
+" augroup END
+
 " Panes
 map <Leader>\ :vsp<CR>
 map <Leader>- :sp<CR>
