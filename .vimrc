@@ -70,6 +70,11 @@ let g:mapleader = " "
 nmap <leader>w :w!<cr>
 nmap <leader>qq :q!<cr>
 
+" RSpec.vim mappings
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>c :call RunCurrentSpecFile()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 set ts=2
