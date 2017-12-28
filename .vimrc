@@ -83,6 +83,11 @@ set ts=2
 set ruler
 set encoding=utf8
 
+"set list
+"set list listchars=tab:│·,trail:·,precedes:←,extends:→,eol:↲,nbsp:~
+"set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+"set lcs+=space:·
+
 set ffs=unix,dos,mac
 
 set nobackup
@@ -229,6 +234,14 @@ function! ToggleVExplorer()
   endif
 endfunction
 map <Leader><CR> :call ToggleVExplorer()<CR>
+
+" Autoremove trailing whitespace on buffer write (save)
+autocmd BufWritePre * %s/\s\+$//e
+
+augroup myvimrchooks
+    au!
+    autocmd bufwritepost .vimrc source ~/.vimrc
+augroup END
 
 " Send vim-rspec to tmux
 let g:rspec_command = 'call Send_to_Tmux("bin/spring rspec {spec}\n")'
