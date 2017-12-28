@@ -225,3 +225,5 @@ function! ToggleVExplorer()
 endfunction
 map <Leader><CR> :call ToggleVExplorer()<CR>
 
+" Send vim-rspec to tmux
+let g:rspec_command = 'call Send_to_Tmux("bin/spring rspec {spec}\n")'
