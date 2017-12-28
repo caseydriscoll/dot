@@ -153,6 +153,8 @@ set novisualbell
 " set t_vb=
 " set tm=500
 
+set splitbelow
+set splitright
 
 syntax on
 
