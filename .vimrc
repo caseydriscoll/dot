@@ -100,7 +100,7 @@ set whichwrap+=<,>,h,l
 set expandtab
 
 " Be smart when using tabs ;)
-set smarttab
+" set smarttab
 
 set expandtab
 set shiftwidth=2
@@ -118,14 +118,17 @@ set tabstop=2
 set lbr
 set tw=500
 
-set ai "Auto indent
-set si "Smart indent
+set autoindent
+" set smartindent
 set wrap "Wrap lines
+
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
 
+" set paste
 set number
 set ignorecase
 set smartcase
