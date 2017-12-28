@@ -157,3 +157,15 @@ nmap <C-k> zc
 imap <C-k> zc
 
 :filetype plugin on
+" Panes
+map <Leader>\ :vsp<CR>
+map <Leader>- :sp<CR>
+map <Leader>h <C-W>h
+map <Leader>j <C-W>j
+map <Leader>k <C-W>k
+map <Leader>l <C-W>l
+
+map + <C-W>>
+map - <C-W><
+map = <C-W>=
+
