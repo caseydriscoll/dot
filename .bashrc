@@ -38,7 +38,9 @@ elif [[ `uname` == 'Darwin' ]]; then
 	alias  vvv="cd ~/Development/vvv"
   alias  sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
-	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.composer/vendor/bin
+  alias fab="cd ~/Development/fab/www"
+
+	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.composer/vendor/bin:/usr/local/lib/node_modules
 	export PATH
 
   if [ -d "$HOME/.rbenv" ]; then
@@ -50,3 +52,5 @@ elif [[ `uname` == 'Darwin' ]]; then
     export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
   fi
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
