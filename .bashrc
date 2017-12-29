@@ -1,12 +1,5 @@
 source ~/.alias
 
-function addhost { echo "$(cat /etc/hosts) $1" | sudo tee /etc/hosts; }
-export -f addhost
-
-function trash { mv "$1" ~/.Trash; } # I never use this.
-export -f trash
-alias  T='trash'
-
 PS1="> "
 
 if [[ `uname` == 'Linux' ]]; then
