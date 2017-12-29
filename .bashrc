@@ -24,7 +24,7 @@ elif [[ `uname` == 'Darwin' ]]; then
 	alias  cddown='cd ~/Downloads'
 	alias  cddrop='cd ~/Dropbox'
 	alias  cdsite='cd ~/Sites'
-	
+
 	alias  la='ls -alh -G'
 	alias  lh='ls -ldh .*'
 	alias  ll='ls -lh -G'
@@ -45,9 +45,4 @@ elif [[ `uname` == 'Darwin' ]]; then
     source ~/.rvm/scripts/rvm
     export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
   fi
-
-	# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 fi
-
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
