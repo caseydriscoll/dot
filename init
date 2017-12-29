@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -f ~/.bashrc ~/.alias ~/.gitconfig ~/.vimrc
+rm -f ~/.bashrc ~/.alias ~/.gitconfig ~/.vimrc ~/.tigrc ~/.tmux.conf ~/.functions
 
 ln -s ~/dot/.bashrc    ~/.bashrc
 ln -s ~/dot/.alias     ~/.alias
@@ -8,3 +8,4 @@ ln -s ~/dot/.gitconfig ~/.gitconfig
 ln -s ~/dot/.vimrc     ~/.vimrc
 ln -s ~/dot/.tigrc     ~/.tigrc
 ln -s ~/dot/.tmux.conf ~/.tmux.conf
+ln -s ~/dot/.functions ~/.functions
