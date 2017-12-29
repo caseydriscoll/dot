@@ -1,6 +1,10 @@
 source ~/.alias
 source ~/.functions
 
+if [ -d "$HOME/.scripts" ]; then
+  for f in $HOME/.scripts/*; do source $f; done
+fi
+
 PS1="> "
 
 if [[ `uname` == 'Linux' ]]; then
