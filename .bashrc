@@ -1,4 +1,5 @@
 source ~/.alias
+source ~/.functions
 
 PS1="> "
 
