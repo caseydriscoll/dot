@@ -1,6 +1,8 @@
 source ~/.alias
 source ~/.functions
 
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+
 if [ -d "$HOME/.scripts" ]; then
   for f in $HOME/.scripts/*; do source $f; done
 fi
@@ -39,9 +41,6 @@ elif [[ `uname` == 'Darwin' ]]; then
   alias  sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
   alias fab="cd ~/Development/fab/www"
-
-	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.composer/vendor/bin:/usr/local/lib/node_modules
-	export PATH
 
   if [ -d "$HOME/.rbenv" ]; then
     export PATH="$HOME/.rbenv/shims:$PATH"
