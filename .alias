@@ -4,6 +4,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias ae='vim ~/.alias'
 alias as='osascript'
 alias att='tmux attach'
 alias attach='tmux attach'
@@ -44,7 +45,7 @@ alias st='status'
 alias status='git status'
 alias suu='sublime .'
 alias tf='tree -C'
-alias timestamp="date '+%Y%m%d%H%M%S'"
+alias timestamp="date '+%Y%m%d%H%M%S' | tee /dev/tty | pbcopy"
 alias t='tf -L 1' # show tree structure at expanding levels
 alias tt='tf -L 2'
 alias ttt='tf -L 3'
