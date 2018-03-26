@@ -14,3 +14,7 @@ rdb ()
     fi;
     $_rake db:migrate && $_rake db:test:prepare
 }
+
+vimflict () {
+  vim -p $(git diff --name-only --diff-filter=U)
+}
