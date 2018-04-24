@@ -249,3 +249,5 @@ augroup END
 
 " Send vim-rspec to tmux
 let g:rspec_command = 'call Send_to_Tmux("bin/spring rspec {spec}\n")'
+
+set clipboard=unnamed
