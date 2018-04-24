@@ -18,3 +18,11 @@ rdb ()
 vimflict () {
   vim -p $(git diff --name-only --diff-filter=U)
 }
+
+ytb () {
+  y=$(date '+%Y%m%d%H%M%S')
+  t=$'\n[_] YTB\n'
+  b=$'    Y:\n    T:\n    B:'
+  echo "$y$t$b" | pbcopy
+  echo "$y$t$b"
+}
