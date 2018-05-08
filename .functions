@@ -15,6 +15,10 @@ rdb ()
     $_rake db:migrate && $_rake db:test:prepare
 }
 
+vimgit() {
+  vim -O $(git diff --name-only) $(git diff --name-only --cached)
+}
+
 vimflict () {
   vim -p $(git diff --name-only --diff-filter=U)
 }
