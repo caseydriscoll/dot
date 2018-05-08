@@ -30,3 +30,7 @@ ytb () {
   echo "$y$t$b" | pbcopy
   echo "$y$t$b"
 }
+
+port () {
+  lsof -nP -i4TCP:$1 | grep LISTEN
+}
