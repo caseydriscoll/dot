@@ -1,0 +1,36 @@
+gkill ()
+{
+    pname=$1;
+    formatted_pname="[${pname:0:1}]${pname:1}";
+    kill -9 $(ps aux | grep $formatted_pname | awk '{print $2}')
+}
+
+rdb ()
+{
+    if [ -f ./bin/rake ]; then
+        local _rake="bin/rake";
+    else
+        local _rake="bundle exec rake";
+    fi;
+    $_rake db:migrate && $_rake db:test:prepare
+}
+
+vimgit() {
+  vim -O $(git diff --name-only) $(git diff --name-only --cached)
+}
+
+vimflict () {
+  vim -p $(git diff --name-only --diff-filter=U)
+}
+
+ytb () {
+  y=$(date '+%Y%m%d%H%M%S')
+  t=$'\n[_] YTB\n'
+  b=$'    Y:\n    T:\n    B:'
+  echo "$y$t$b" | pbcopy
+  echo "$y$t$b"
+}
+
+port () {
+  lsof -nP -i4TCP:$1 | grep LISTEN
+}

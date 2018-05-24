@@ -1,8 +1,13 @@
 #!/bin/bash
 
-rm -f ~/.bashrc ~/.alias ~/.gitconfig ~/.vimrc
+mkdir ~/.dot.bk
+mv  ~/.bashrc ~/.alias ~/.gitconfig ~/.vimrc ~/.tigrc ~/.tmux.conf ~/.functions ~/.pryrc ~/.dot.bk
 
 ln -s ~/dot/.bashrc    ~/.bashrc
 ln -s ~/dot/.alias     ~/.alias
 ln -s ~/dot/.gitconfig ~/.gitconfig
 ln -s ~/dot/.vimrc     ~/.vimrc
+ln -s ~/dot/.tigrc     ~/.tigrc
+ln -s ~/dot/.tmux.conf ~/.tmux.conf
+ln -s ~/dot/.functions ~/.functions
+ln -s ~/dot/.pryrc     ~/.pryrc

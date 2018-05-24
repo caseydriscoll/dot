@@ -1,11 +1,11 @@
 source ~/.alias
+source ~/.functions
 
-function addhost { echo "$(cat /etc/hosts) $1" | sudo tee /etc/hosts; }
-export -f addhost
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
-function trash { mv "$1" ~/.Trash; } # I never use this.
-export -f trash
-alias  T='trash'
+if [ -d "$HOME/.scripts" ]; then
+  for f in $HOME/.scripts/*; do source $f; done
+fi
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -33,7 +33,7 @@ elif [[ `uname` == 'Darwin' ]]; then
 	alias  cddown='cd ~/Downloads'
 	alias  cddrop='cd ~/Dropbox'
 	alias  cdsite='cd ~/Sites'
-	
+
 	alias  la='ls -alh -G'
 	alias  lh='ls -ldh .*'
 	alias  ll='ls -lh -G'
@@ -43,13 +43,16 @@ elif [[ `uname` == 'Darwin' ]]; then
 	alias  vvv="cd ~/Development/vvv"
   alias  sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
-	PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/.composer/vendor/bin
-	export PATH
+  alias fab="cd ~/Development/fab/www"
 
-	source ~/.rvm/scripts/rvm
+  if [ -d "$HOME/.rbenv" ]; then
+    export PATH="$HOME/.rbenv/shims:$PATH"
+  fi
 
-	# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+  if [ -d "~/.rvm" ]; then
+    source ~/.rvm/scripts/rvm
+    export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+  fi
 fi
 
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
