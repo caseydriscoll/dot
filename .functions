@@ -34,3 +34,7 @@ ytb () {
 port () {
   lsof -nP -i4TCP:$1 | grep LISTEN
 }
+
+most_recent_file () {
+  ls -t $1 | head -1
+}
