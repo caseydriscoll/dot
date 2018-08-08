@@ -20,6 +20,7 @@ if [[ `uname` == 'Linux' ]]; then
 	alias  update='sudo apt-get update'
 	alias  upgrade='sudo apt-get upgrade --show-upgraded'
 	alias  www='cd /srv/www/'
+  alias  motd='run-parts /etc/update-motd.d/'
 
 	if [ -d "~/.wp-cli" ]; then
 		PATH="$PATH:$HOME/.wp-cli/bin"
