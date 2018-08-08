@@ -46,9 +46,15 @@ elif [[ `uname` == 'Darwin' ]]; then
     export PATH="$HOME/.rbenv/shims:$PATH"
   fi
 
-  if [ -d "~/.rvm" ]; then
-    source ~/.rvm/scripts/rvm
-    export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+  # if [ -d "$HOME/.rvm" ]; then
+    # source ~/.rvm/scripts/rvm
+    # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+  # fi
+
+  if [ -d "$HOME/Library/Android/sdk" ]; then
+    PATH="$PATH:$HOME/Library/Android/sdk/tools"
+    PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+    export PATH
   fi
 fi
 
