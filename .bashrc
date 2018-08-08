@@ -23,6 +23,7 @@ if [[ `uname` == 'Linux' ]]; then
 	alias  update='sudo apt-get update'
 	alias  upgrade='sudo apt-get upgrade --show-upgraded'
 	alias  www='cd /srv/www/'
+  alias  motd='run-parts /etc/update-motd.d/'
 
 	if [ -d "~/.wp-cli" ]; then
 		PATH="$PATH:$HOME/.wp-cli/bin"
@@ -49,9 +50,15 @@ elif [[ `uname` == 'Darwin' ]]; then
     export PATH="$HOME/.rbenv/shims:$PATH"
   fi
 
-  if [ -d "~/.rvm" ]; then
-    source ~/.rvm/scripts/rvm
-    export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+  # if [ -d "$HOME/.rvm" ]; then
+    # source ~/.rvm/scripts/rvm
+    # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+  # fi
+
+  if [ -d "$HOME/Library/Android/sdk" ]; then
+    PATH="$PATH:$HOME/Library/Android/sdk/tools"
+    PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+    export PATH
   fi
 fi
 
