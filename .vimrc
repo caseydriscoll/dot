@@ -35,6 +35,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -193,13 +194,13 @@ map <Leader>T :CtrlPBufTagAll<CR>
 
 " netrw
 " https://shapeshed.com/vim-netrw/
-let g:netrw_liststyle = 3
-let g:netrw_banner = 0
-let g:netrw_browse_split = 4
-let g:netrw_winsize = 15
-let g:netrw_altv = 1
-let g:netrw_sort_sequence = '[\/]$,*'
-let g:netrw_keepdir = 0
+" let g:netrw_liststyle = 3
+" let g:netrw_banner = 0
+" let g:netrw_browse_split = 4
+" let g:netrw_winsize = 15
+" let g:netrw_altv = 1
+" let g:netrw_sort_sequence = '[\/]$,*'
+" let g:netrw_keepdir = 0
 
 " augroup ProjectDrawer
 "  autocmd!
@@ -238,7 +239,8 @@ function! ToggleVExplorer()
       let t:expl_buf_num = bufnr("%")
   endif
 endfunction
-map <Leader><CR> :call ToggleVExplorer()<CR>
+"map <Leader><CR> :call ToggleVExplorer()<CR>
+map <Leader><CR> :NERDTreeToggle<CR>
 
 " Autoremove trailing whitespace on buffer write (save)
 autocmd BufWritePre * %s/\s\+$//e
