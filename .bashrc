@@ -42,6 +42,8 @@ elif [[ `uname` == 'Darwin' ]]; then
 
   alias fab="cd ~/Development/fab/www"
 
+  export EDITOR='vim'
+
   if [ -d "$HOME/.rbenv" ]; then
     export PATH="$HOME/.rbenv/shims:$PATH"
   fi
