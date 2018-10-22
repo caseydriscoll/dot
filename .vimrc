@@ -25,7 +25,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-abolish'
 Plugin 'vim-ruby/vim-ruby'
@@ -36,6 +36,7 @@ Plugin 'jgdavey/tslime.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'scrooloose/nerdtree'
+Plugin 'junegunn/fzf'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,6 +52,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
 
 " https://github.com/amix/vimrc
 " Sets how many lines of history VIM has to remember
@@ -68,6 +70,9 @@ set autoread
 " like <leader>w saves the current file
 let mapleader = " "
 let g:mapleader = " "
+
+" FZF Fuzzy Finder
+nmap <leader>e :FZF<cr>
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -175,22 +180,22 @@ imap <C-k> zc
 :filetype plugin on
 
 " CtrlP plugin
-let g:ctrlp_map = '<Leader>e'
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = '\vvendor$|node_modules$|tmp$|\.git$|\.hg$|\.svn$'
-let g:ctrlp_prompt_mappings = {
-  \ 'PrtSelectMove("j")':   ['<c-j>', '<c-n>'],
-  \ 'PrtSelectMove("k")':   ['<c-k>', '<c-p>'],
-  \ 'PrtHistory(-1)':       ['<down>'],
-  \ 'PrtHistory(1)':        ['<up>'],
-  \ 'MarkToOpen()':         ['<c-a>'],
-  \ }
-map <Leader>f :CtrlPCurFile<CR>
-map <Leader>r :CtrlPMRUFiles<CR>
-map <Leader>b :CtrlPBuffer<CR>
-map <Leader>g :CtrlPLine<CR>
-map <Leader>t :CtrlPBufTag<CR>
-map <Leader>T :CtrlPBufTagAll<CR>
+" let g:ctrlp_map = '<Leader>e'
+" let g:ctrlp_working_path_mode = 0
+" let g:ctrlp_custom_ignore = '\vvendor$|node_modules$|tmp$|\.git$|\.hg$|\.svn$'
+" let g:ctrlp_prompt_mappings = {
+"   \ 'PrtSelectMove("j")':   ['<c-j>', '<c-n>'],
+"   \ 'PrtSelectMove("k")':   ['<c-k>', '<c-p>'],
+"   \ 'PrtHistory(-1)':       ['<down>'],
+"   \ 'PrtHistory(1)':        ['<up>'],
+"   \ 'MarkToOpen()':         ['<c-a>'],
+"   \ }
+" map <Leader>f :CtrlPCurFile<CR>
+" map <Leader>r :CtrlPMRUFiles<CR>
+" map <Leader>b :CtrlPBuffer<CR>
+" map <Leader>g :CtrlPLine<CR>
+" map <Leader>t :CtrlPBufTag<CR>
+" map <Leader>T :CtrlPBufTagAll<CR>
 
 " netrw
 " https://shapeshed.com/vim-netrw/
