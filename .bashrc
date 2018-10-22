@@ -46,6 +46,8 @@ elif [[ `uname` == 'Darwin' ]]; then
 
   alias fab="cd ~/Development/fab/www"
 
+  export EDITOR='vim'
+
   if [ -d "$HOME/.rbenv" ]; then
     export PATH="$HOME/.rbenv/shims:$PATH"
   fi
@@ -63,3 +65,5 @@ elif [[ `uname` == 'Darwin' ]]; then
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

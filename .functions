@@ -38,3 +38,11 @@ port () {
 most_recent_file () {
   ls -t $1 | head -1
 }
+
+kash () {
+  kubectl -it exec $1 bash
+}
+
+top_down_migrate_timestamp () {
+  bin/rake db:migrate:status | grep "^  down" | head -n1 | tr -s ' ' | cut -d " " -f 3
+}
