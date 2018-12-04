@@ -5,6 +5,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 alias ae='vim ~/.alias'
+alias andlog='adb logcat -s chromium'
 alias as='osascript'
 alias att='tmux attach'
 alias attach='tmux attach'
