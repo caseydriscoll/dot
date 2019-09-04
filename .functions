@@ -53,3 +53,7 @@ kash () {
 top_down_migrate_timestamp () {
   bin/rake db:migrate:status | grep "^  down" | head -n1 | tr -s ' ' | cut -d " " -f 3
 }
+
+copy_branch () {
+  git rev-parse --abbrev-ref HEAD | pbcopy
+}
