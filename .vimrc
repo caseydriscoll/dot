@@ -37,6 +37,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf'
+Plugin 'posva/vim-vue'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -246,6 +247,8 @@ function! ToggleVExplorer()
 endfunction
 "map <Leader><CR> :call ToggleVExplorer()<CR>
 map <Leader><CR> :NERDTreeToggle<CR>
+
+let NERDTreeShowHidden=1
 
 " Autoremove trailing whitespace on buffer write (save)
 autocmd BufWritePre * %s/\s\+$//e
