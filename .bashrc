@@ -1,3 +1,5 @@
+[ -z "$PS1" ] && return
+
 source ~/.alias
 source ~/.functions
 
