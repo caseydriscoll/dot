@@ -57,3 +57,14 @@ top_down_migrate_timestamp () {
 copy_branch () {
   git rev-parse --abbrev-ref HEAD | pbcopy
 }
+
+renew_certbot () {
+  sudo certbot certonly --server https://acme-v02.api.letsencrypt.org/directory \
+    --dns-digitalocean --dns-digitalocean-credentials ~/.ssl/credentials \
+    --dns-digitalocean-propagation-seconds 10 \
+    -d \*.devserv.dev
+}
+
+fb () {
+  RETAIL_PORT=3009 WEB_PORT=3001 DB_PORT=5434 REDIS_PORT=6380 bin/service start
+}
