@@ -27,6 +27,9 @@ if [[ `uname` == 'Linux' ]]; then
 	alias  www='cd /srv/www/'
   alias  motd='run-parts /etc/update-motd.d/'
 
+  export VISUAL=vim
+  export EDITOR="$VISUAL"
+
 	if [ -d "~/.wp-cli" ]; then
 		PATH="$PATH:$HOME/.wp-cli/bin"
 	fi
@@ -70,3 +73,6 @@ fi
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash

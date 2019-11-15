@@ -17,6 +17,7 @@ alias c='clear'
 alias cdh='cd ~'
 alias cdhome='cd ~'
 alias d='date'
+alias dc='docker-compose'
 alias detach='tmux detach'
 alias doit='eval "sudo $(fc -ln -1)"' # when I forget to use sudo, redo the last command with sudo
 alias g='git'
