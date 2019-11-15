@@ -16,11 +16,18 @@ rdb ()
 }
 
 vimgit() {
-  vim -O $(git diff --name-only) $(git diff --name-only --cached)
+  vim -O \
+    $(git diff --name-only) \
+    $(git diff --name-only --cached) \
+    $(git ls-files --others --exclude-standard)
 }
 
 vimflict () {
   vim -p $(git diff --name-only --diff-filter=U)
+}
+
+vimrg () {
+  vim -c "/$1" -O $(rg -l $1)
 }
 
 ytb () {
@@ -45,4 +52,8 @@ kash () {
 
 top_down_migrate_timestamp () {
   bin/rake db:migrate:status | grep "^  down" | head -n1 | tr -s ' ' | cut -d " " -f 3
+}
+
+copy_branch () {
+  git rev-parse --abbrev-ref HEAD | pbcopy
 }

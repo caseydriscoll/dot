@@ -1,3 +1,5 @@
+[ -z "$PS1" ] && return
+
 source ~/.alias
 source ~/.functions
 
@@ -60,6 +62,7 @@ elif [[ `uname` == 'Darwin' ]]; then
   if [ -d "$HOME/Library/Android/sdk" ]; then
     PATH="$PATH:$HOME/Library/Android/sdk/tools"
     PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+    PATH="$PATH:$HOME/Library/Android/sdk/build-tools/28.0.2"
     export PATH
   fi
 fi
