@@ -35,21 +35,11 @@ if [[ `uname` == 'Linux' ]]; then
 	fi
 elif [[ `uname` == 'Darwin' ]]; then
 	echo "THIS IS OSX"
-	alias  cddesk='cd ~/Desktop'
-	alias  cddown='cd ~/Downloads'
-	alias  cddrop='cd ~/Dropbox'
-	alias  cdsite='cd ~/Sites'
 
 	alias  la='ls -alh -G'
 	alias  lh='ls -ldh .*'
 	alias  ll='ls -lh -G'
-	# alias  apache='sudo /usr/sbin/apachectl'
-	# alias  nginx='sudo nginx'
-	alias  www="cd ~/Development/www"
-	alias  vvv="cd ~/Development/vvv"
   alias  sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-
-  alias fab="cd ~/Development/fab/www"
 
   export EDITOR='vim'
 
