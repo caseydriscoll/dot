@@ -1,6 +1,6 @@
 # DOT
 
-This is a directory of a bunch of my dot files for fast server configuration
+This is a directory of a bunch of my dot files for fast server configuration.
 
 To quickly get started on a new server, initialize with the commands:
 
