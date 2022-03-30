@@ -58,11 +58,12 @@ elif [[ `uname` == 'Darwin' ]]; then
     PATH="$PATH:$HOME/Library/Android/sdk/build-tools/28.0.2"
     export PATH
   fi
+
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
