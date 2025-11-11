@@ -33,6 +33,9 @@ if [[ `uname` == 'Linux' ]]; then
 	if [ -d "~/.wp-cli" ]; then
 		PATH="$PATH:$HOME/.wp-cli/bin"
 	fi
+
+  export PATH="/opt/asdf:$PATH"
+
 elif [[ `uname` == 'Darwin' ]]; then
 	echo "THIS IS OSX"
 
